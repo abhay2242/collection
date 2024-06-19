@@ -8,7 +8,7 @@ class test01_Set_hashset {
 		
 		System.out.println(hs);
 System.out.println(hs.add("a")); System.out.println(hs);
-	       // e1.hashCode() -> 97%16 = 1;
+	           // e1.hashCode() -> 97%16 = 1;
 		   // new bucket will create  
 		   // element  added  successfully
 System.out.println(hs.add(5)); System.out.println(hs);
@@ -38,7 +38,7 @@ System.out.println(hs.add(false)); System.out.println(hs);//	System.out.println(
 		   //bucket  found 
 		   // comapre e7(false)equals(e2(5))  return false match not found ;
 		   //add element to the bucket next to the last element		
-		System.out.println(hs.add("abhay")); System.out.println(hs);	System.out.println(((String)"abhay").hashCode());
+		System.out.println(hs.add("abhay")); System.out.println(hs);//System.out.println(((String)"abhay").hashCode());
 
 
 	
