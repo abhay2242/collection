@@ -57,7 +57,7 @@ class test02_Set_TreeSet {
 	public static void main(String[] args) 
 	{
            
-			TreeSet <Object> st = new TreeSet<> ();
+		TreeSet <Object> st = new TreeSet<> ();
 			st.add("z");
 			st.add("f");
 			st.add("e");
@@ -73,19 +73,6 @@ class test02_Set_TreeSet {
 			st2.add(4);
 			System.out.println( st2);
 	
-	/*      TreeSet <Integer> st3 = new TreeSet<> (new Comparator<Integer>(){
-			                                                                        @override
-																						public int compare( int e1, int e2){
-																						     return e2 - e1;
-																					}
-		                                                                          }  
-																				 );
-			st3.add(1);
-			st3.add(3);
-			st3.add(2);
-			st3.add(4);
-			System.out.println( st);
-	*/
 	        TreeSet <ex> st4 = new TreeSet<> ((s1, s2) -> (s1.getterx() - s2.getterx()));
 			st4.add(new ex(5, 6));
 			st4.add(new ex(1,24));
