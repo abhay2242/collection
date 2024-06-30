@@ -1,0 +1,27 @@
+import java.util.LinkedList;
+
+class LinkedListimple{
+
+	public static void main(String args[]){
+	
+		LinkedList<Object> str = new LinkedList<>();
+				  
+				 str.add("4"); System.out.println(str);
+	       str.add("abhay"); System.out.println(str);
+         str.add('1'); System.out.println(str);
+         str.add(null); System.out.println(str);
+         str.addFirst(new ex(5,6)); System.out.println(str);
+				 str.addFirst(true); System.out.println(str);
+				 str.addFirst(new ex(100,200)); System.out.println(str);
+                
+
+//methods available in Linked list	 
+				// System.out.println(str.size());
+        // System.out.println(str.getLast());
+				// System.out.println(str.getFirst());
+        // System.out.println(str.removeFirst());
+        // System.out.println(str.indexOf('1'));
+				//System.out.println(str.contains("4"));
+	
+	}
+}
