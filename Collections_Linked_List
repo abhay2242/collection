@@ -16,12 +16,12 @@ class LinkedListimple{
                 
 
 //methods available in Linked list	 
-				// System.out.println(str.size());
-        // System.out.println(str.getLast());
-				// System.out.println(str.getFirst());
-        // System.out.println(str.removeFirst());
-        // System.out.println(str.indexOf('1'));
-				//System.out.println(str.contains("4"));
-	
+			// System.out.println(str.size());
+		        // System.out.println(str.getLast());
+			// System.out.println(str.getFirst());
+		        // System.out.println(str.removeFirst());
+		        // System.out.println(str.indexOf('1'));				
+		        //System.out.println(str.contains("4"));
+			
 	}
 }
