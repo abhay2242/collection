@@ -1,3 +1,20 @@
+HashSet is the Set interface class. 
+This is used to store the objects or elements with the help of technique called hashing. 
+It does not allow the duplicate to store.
+It doesnt maintain insertion order elements are stored on the basis of the hashcode.
+Internally it is usuing the buckets for grouping the elements
+
+steps to store the element the element in the HashSet.
+	1) Generate the hashcode to the respected element.
+	2) Their are bydefault 16 index to store element so now find the reminder by  dividing it by 16.
+	3) Now compilor will check the bucket is availble with that or not.
+	      if No ->  A new bucket is generated and element is stored.
+	      if Yes -> NO new bucket will generated and equals method will executed 
+	                                                     if return true -> means the elemnet is already exist. 
+	                                                     if return false > means the element is not exist the added sucessfully.
+
+
+
 import java.util.HashSet;
 
 class test01_Set_hashset {
