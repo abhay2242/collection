@@ -12,7 +12,7 @@ import java.util.TreeSet;
 *      interface  type and must implement its method compareTo(-), else Ts.add() method throws
 *      ClassCastException and object is not store
 *  7) The string class and all wrapper class are implemented from Comparable interface.
-*       Its compareTo is implemented for sorting objects inASC order. 
+*       Its compareTo is implemented for sorting objects in ASC order. 
 *  8) For storing our own class objects in Treeset, we also must implement Comparable interface 
 *       compareTo method.
 *  
@@ -21,7 +21,7 @@ import java.util.TreeSet;
 *      tell to TS.add() weather the adding object is equal, or smaller or bigger than already added object 
 *         -> if compareTo() return 0     = TS.add() do not store e2
 *         -> if compareTo() return -ve  = TS.add() store e2 LEFT to e1
-*			-> if compareTo() return +ve = TS.add() store e2 RIGHT to e1
+*	  -> if compareTo() return +ve = TS.add() store e2 RIGHT to e1
 *
 * 10) For storing obj in ASC or DSC in comapareTo() method we must follow below algo
 *       -> for sorting in ASC = [ CO - AO]
