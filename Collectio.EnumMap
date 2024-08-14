@@ -1,0 +1,30 @@
+import java.util.EnumMap;
+
+// EnumMap is used to store one enum name constant as key
+//       any type of object as value
+// for creating the enum object we must use constructor 
+//       not the factory method
+
+enum fooditem {
+      PavBhaji, PaniPatasi, Samosa, Ghevar , Pan
+}
+
+class  Collection_EnumMap{
+
+	public static void main(String[] args) 
+	{
+	  
+	    EnumMap<fooditem, Object> obj  = new EnumMap<>(fooditem.class);
+
+            obj.put(fooditem.PavBhaji, 60);
+		    obj.put(fooditem.PaniPatasi, 10);
+          	obj.put(fooditem.Samosa, 20);
+			obj.put(fooditem.Ghevar, 250);
+		    obj.put(fooditem.Pan, 100);
+
+			System.out.println(obj);
+
+
+	
+	}
+}
