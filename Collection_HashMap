@@ -1,0 +1,25 @@
+import java.util.HashMap;
+
+// HashMap is used to store objects in hashcode order
+// HashMap does not allow duplicates objects to store
+
+class  Collection_HashMap{
+	
+	public static void main(String[] args) 
+	{
+	
+	    HashMap<Object, Object> obj = new HashMap<>();
+
+		     obj.put("dsa", 1);
+		//	 System.out.println(((Object)("dsa")).hashCode());
+			 obj.put("Java", 2);
+			//System.out.println(((Object)"Java").hashCode());
+			 obj.put("python",3);
+	       // System.out.println(((Object)"python").hashCode());
+		     obj.put("dsa", 3);
+			 obj.put(null, 4);
+             
+			 obj.put(32, 7);
+			 System.out.println(obj);
+	}
+}
