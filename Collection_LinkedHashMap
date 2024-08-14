@@ -1,0 +1,21 @@
+import java.util.LinkedHashMap;
+
+//LinkedHashMap is used to store objects in the insertion order
+//LinkedHashMap is same as the HashMap just diffrence is of insertion order
+
+
+class Collection_LinkedHashMap{
+
+	public static void main(String[] args) 
+	{
+	   
+	    LinkedHashMap<Object, Object> obj = new LinkedHashMap<>();
+
+		      obj.put("Vasudev", 3);
+			  obj.put("Ram", 32);
+			  obj.put("BholeNath",1);
+			  obj.put("Bajrangbali", 2);
+	    
+		     System.out.println(obj);
+	}
+}
