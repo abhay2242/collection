@@ -1,13 +1,71 @@
-Map is a root interface of map hierarchy. It is a collection with mapping.
-It is a prt of coolection framework available from Java 1.2v
-if we want to store objects with mapping , it maeas if we want to store (KEY, VALUE) pair table format we must chosse map interface and its implementation classes.
-Map interface does not maintain insertion order and does not have index.
-Map interface has a sub interface 
-  sortedMap and its has
-   sub interface NavigabelMap
-Sortedmap interface is for storing entire on keys based sorting oder. It is also available from Java 1.2V
-NavigableMap is given in Java 6v , for adding more naviagtin methods to SortedMap.
-Map interface has 7 implementation classes
-  5 are CsF classes and 2 are lagecy classes
-  HashMap, LinkedHashMap, EnumMap, WeakHashMap, IdentityHashMap, Hashtable, Properties.
-  SortedMap and NavigableMap has only one implementation class TreeMap.
+1> Map is a root interface of map hierarchy. It is a collection with mapping.
+2> It is a prt of coolection framework available from Java 1.2v
+3> If we want to store objects with mapping , it maeas if we want to store (KEY, VALUE) pair table format we must chosse map interface and its implementation classes.
+4> Map interface does not maintain insertion order and does not have index.
+5> Map interface has a sub interface 
+     sortedMap and its has
+     sub interface NavigabelMap
+6> Sortedmap interface is for storing entire on keys based sorting oder. It is also available from Java 1.2V
+7> NavigableMap is given in Java 6v , for adding more naviagtin methods to SortedMap.
+8> Map interface has 7 implementation classes
+     5 are CsF classes and 2 are lagecy classes
+     HashMap, LinkedHashMap, EnumMap, WeakHashMap, IdentityHashMap, Hashtable, Properties.
+     SortedMap and NavigableMap has only one implementation class TreeMap.
+
+----------------------------------------------------------------------------------------------------------------------------------
+                             MAP
+
+     SortedMap
+       |
+    NavigableMap
+
+
+HashMap    TreeMap   EnumMap   LinkedHashMap   IndentityMap   WeakHashMap  HashTable   Properties
+
+-------------------------------------------------------------------------------------------------------------------------------------
+HashMap -> 
+
+1) HashMap is an Collection FrameWork collection.
+      it  is avalable from Java 1.2V
+      It is implementation of Map interface.
+
+    -> when we want to store objects with mapping with unique keys in single thread appliction or in method local operation     
+       without worrying insertion order we must choose HashMap.
+
+2) It is non syncronized means not thread safe objects.
+3) It  is unordered collection -> does not maintian the insertion order.
+4) Its implementation data structure is hashtable.
+5) Its default capacity is 16
+     incremeantal capacity is double or +1
+     load factor is 0.75 or 75%
+6) It allows us to store 
+      as keys -> only 3 types of objects [ Homogenous , Heterogenous and uniqu] 
+      as value -> all 4 types of objects [ Homogenous, Heterogenous, Unique and Duplicate]
+
+    HashMap by default can stop only refrence wise duplicates keys, 
+    If we want stop data wise duplicates, we must override both hashcode() and equals() method in our class, else data wise
+     duplicates keys are stored in collection.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
