@@ -1,0 +1,165 @@
+List Interface
+  
+  -> List  is a sub interface of collection,it is a ordered collection
+  -> It is a part of collection framework available from 1.2v
+  -> If we want to store multiple objects in insertion order with index inluding duplicate,
+       we must choose list interface and its implementation classes.
+  -> List interface has four implementation classes
+	         - Vector
+    			 - ArrayList
+    			 - LinkedList
+    			 - Stack
+    
+
+-----------------------------------------------------------------------------------------------------------------------------------
+	Vector
+     -> The vector is legacy collection. It is available from Java 1.0V
+		 -> In Java 1.2V it is added as sub type of list Interface.
+		    
+			    when we want to store multiple objects
+				    - In multithreaded enviorment with thread safety
+					  - In insertion order with index
+					  - Including dulicate
+
+    -> It is synronized means thread safe object.
+		-> It is orderd collection -> Insertion order with index.
+		-> Its implementation data structure is Growable Array
+		-> Its default capacity is 10, incremental capacity is double or +1 
+		-> It allows us to store null, multiple nulls
+		-> It preserve insertion order.
+		-> It allows us to retrieve elements both sequential and random
+		-> In searching ans removing operations internally equals() method is called
+		   and it is executed from arg objects class. If is not overriden in arg class it is
+			 execute from java.lang.Object class, then this arg object is compared with 
+			 collection elements by using refrence.
+		    
+     -> Vector<E> class methds
+	     
+		       public syncronized boolean isEmpty();
+			                        void addElement(int index);
+    												  Object firstElement();
+    												  Object lastElement();
+    												  void insertElementA(Object o, int index);
+    												  void setElementAt(Object o, int index);
+    												  boolean removeElement(Object o);
+    												  void removeElementAt(int index);
+    												  void removeRange(int index, int index);
+    												  void removeAllElement();
+    												  int size();
+    												  int capacity();
+    												  void insureCapacity();
+    												  void trimToSize();
+                              void setSize(int size);
+    
+=====================================================================================
+
+  ArrayList
+     -> The ArrayList is Collection framework collection. It is available from Java 1.2V
+	   -> It is implementation of  list Interface.
+
+	        when we want to store multiple objects
+				      - In single Thread enviorment 
+  					  - In insertion order with index
+  					  - Including dulicate
+  					  - method local operation where thread safety is not required
+     -> It is not syncronized means not thread safe objects.
+  	 -> It is orderd collection - Insertion order with index.
+  	 -> Its implementation data structure is resizable array.
+  	 -> Its default capacity is 10 and incremental capacity is half or +1.
+     -> It allows us to store all 4 types of objects 
+  	 -> It allows  us to store null, multiple null.
+  	 -> It preserve insertion order.
+  	 -> It allows us to retrieve elements in both sequnetilly and random.
+     -> In searching ans removing operations internally equals() method is called
+  		     and it is executed from arg objects class. If is not overriden in arg class it is
+  			 execute from java.lang.Object class, then this arg object is compared with 
+  			  collection elements by using refrence.
+    
+	   -> ArrayList methods
+	       - public void ensureCapacity(int capacity);
+		     - public void trimToSize();
+
+===================================================================================
+
+LinkedList 
+     -> The LinkedList is Collection framework collection.
+	   -> It is available from Java 1.2V. It is implementation of List and Deque interface.
+ 
+	    If our more operations are insertion and remove objects at begin and middle location and 
+		  if we want to ensure only sequential access, we must choose LinkedList.
+
+    -> It is not syncronized means not thread safe.
+  	-> It is orderd collection -> maintains insetion order without index.
+  	-> Its implementation data structure is doulby linked list 
+  	-> Its default capacity is 0, and incemenatal capacity is 1.
+  	-> It allow us to store all types of objects.
+  	-> It allows us to store null.
+  	-> It preserve insertion order without index.
+  	-> It allows us to retrieve elements only sequentially.
+    -> In searching ans removing operations internally equals() method is called
+		   and it is executed from arg objects class. If is not overriden in arg class it is
+			 execute from java.lang.Object class, then this arg object is compared with 
+			 collection elements by using refrence.
+		 
+		  
+	
+
+    Questions                         Vector                     ArrayList                        LinkedList                             Stack
+
+
+1 Purpose                         MT Environment              ST Environment                 Insert & Remove                             LIFO
+                                 Resizable Array              Resizable Array
+                                 
+2 Data Structure                 Reziable array               Resizable array                Doubly-Linked list                          stack
+
+3 Synchronized                   Yes                                  No                                      No                           Yes
+                                        
+4 Ordered                        Yes                                  Yes                                     Yes                          Yes
+
+5 Capacity                       DC-10, IC-double             DC-10, IC-10rHalf              DC-0, IC-1                                  DC-10, IC-double
+ 
+6 objects type                   H, H, U, D                   H, H, U,H                      H, H, U, D                                  H, H, U, D
+
+7 null allowed?                  allowed, many                allowed, many                  allowed, many                               allowed, many
+
+8 Storing Order                  Insertion order              Insertion order                Insertion order                             Insertion order 
+                                    with index                     with index                 without index                                with index 
+
+9 retrieving                     Sequentially,                Sequentially,                   Sequentially                               LIFO but random
+                                  Randomly equals()            Randomly equals()                                                         access is also possible
+
+10 internal                     equals()                         equals()                       equals()                                 equals()
+      methods  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
