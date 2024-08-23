@@ -45,9 +45,47 @@ HashMap ->
     HashMap by default can stop only refrence wise duplicates keys, 
     If we want stop data wise duplicates, we must override both hashcode() and equals() method in our class, else data wise
      duplicates keys are stored in collection.
+
+HashMap internall memory structure
+
+    -> HashMap internally used table data structure for storing entries
+	-> Hash table data strutcture internally used another data structure called bucket
+	      - bucket is also a collection, linked list, it is a group of same hashcode objects
+		    for every new hashcode objects new bucket is created
+	-> if we pass same hash code objects with diff refrence and diff state i t stored in the existing bucket.
+	-> if new objects is storing with and existing objects hash code, we call it as hash collision when
+	     hash collision is occured this new object must be stored in the same existing bucket. Hence this
+		 new objects is comapred with existing objects abailable in this bucket by using == operator and 
+		 equals() method.
+    -> It this new objec is unique based on the both referece and state, it is stored in the same bucket.
+	-> It this new objects is same eithre reference wise or data wise, existing value is replaced with 
+	     this passed new value.
  
 
+Algorithm 
 
+		 1) when we add an entry, put(), method internally 
+		         - first calls hashcode() method by using key objetcs
+				 - then it searches for  a bucket in hash table with this key objects hash code.
+				 - if bucket is not found,
+				       it creates new bucket with this hash code as its identify and store this entiry directly
+					   in this bucket without any comparision 
+                - if bucket is found,
+				      means there are some similar entries are found, hence this entry must be compared 
+					  wheather  it is unique or not. For this purpose , put() method internally uses == operator
+					  and equals() method.
+					      
+						  - first == operator is used for compared this entry key with existing keys by using 
+						    refrence.  
+							    if match found,
+				    			   exisiting value is replaced with this new value.
+					           if match not found with refrence ,
+							      equals() method is called to compare them with data 
+								     if match found with data,
+									    existing value is replaced with this new value.
+									if match not found
+									  this entry is stored in this bucket.
+				
 
 
 
