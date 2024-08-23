@@ -90,6 +90,24 @@ Algorithm
 
 LinkedHashMap-
 
+1) LinkedHashMap is an Collection FrameWork collection.
+      it  is avalable from Java 1.2V
+      It is implementation of Map interface.
+
+    -> when we want to store objects with mapping with unique keys in single thread appliction or in method local operation     
+       with insertion order we must choose LinkedHashMap.
+
+2) It is non syncronized means not thread safe objects.
+3) It  is ordered collection -> it maintian the insertion order.
+4) Its implementation data structure is Double linked List.
+5) Their is no default capacity in linkedList
+6) It allows us to store 
+      as keys -> only 3 types of objects [ Homogenous , Heterogenous and unique] 
+      as value -> all 4 types of objects [ Homogenous, Heterogenous, Unique and Duplicate]
+
+7) as key - only one null is allowed 
+   as value - multiple null are allowed.
+
 
 
 ===============================================================================================================================================
