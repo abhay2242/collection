@@ -112,7 +112,23 @@ LinkedHashMap-
 
 ===============================================================================================================================================
 
-EnumMap
+EnumMap-
+
+
+  EnumMap is an collection framework collection 
+     -> It is available from Java 5v
+     -> It is an implementation of map interface 
+
+   -> It is used for storing one enum named constant as keys and any types of objects as value.
+   -> It is non syncronized means it is not thread safe.
+  * -> It is an ordered collection
+           it store names constants in the order exactly they are declared in enum.
+  * -> The internal data structure is fixed array
+  * -> The length is enum size, means number of named constants.
+     -> It allow us to store only the given name constants.
+  * -> It does not allow null.
+     -> In adding searching and removing opertions, internally 
+      equals() method is called and those executed from enum.
 
 
 =======================================================================================================================================
