@@ -1,0 +1,50 @@
+//for storing or creating file
+
+import java.util.Properties;
+import java.io.IOException;
+import java.io.FileWriter;
+//import java.io.FileReader;
+
+//properties
+class hashtable{
+
+ public static void main(String[] args) throws IOException{
+  
+     Properties g =new Properties();
+	 g.setProperty("SNAME","abhay");
+	 g.setProperty("SROLLNO","0101CA231001");
+	 g.setProperty("FEE","24000");
+     g.setProperty("COURSE","corejava");
+	 
+	 System.out.println(g);
+
+	 g.store(new FileWriter("studentdetail.properties"), "description");
+ }
+}
+
+
+=================================================================================================================================================================================================
+
+//for loading the detils from file 
+
+
+import java.util.*;
+import java.io.*;
+
+class  property_loading{
+	public static void main(String[] args) throws IOException,FileNotFoundException
+	{
+          Properties n = new Properties();
+		  n.load(new FileReader("studentdetail.properties"));
+		  System.out.println(n);
+    }
+}
+
+
+
+
+
+
+
+
+
