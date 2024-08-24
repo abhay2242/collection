@@ -135,15 +135,41 @@ EnumMap-
 
 TreeMap-
 
+ ->It is used for storing entries in sorting order
+ ->The sorting is the order supplier by the adding key objects
+ ->The sorting can be apply by using
+   1) comparable interface
+   2) comparator interface 
+ ->The key objects must be homogenous Comparable type 
+    else treeMap.put() method throws CCE
+ -> If we want to entries in diffrent sorting order
+    or if we want to store non-comparable keys we use 
+    supply custom sorting order logic by using comparator
+ ->As key only homogenous Comparable type objects are allowed as 
+    value any of objects is allowed
+ ->As key null is not allowed
+ ->As value null is allowed and multiple nulls are allowed
+
 
 ======================================================================================================================================================
 
 weakHashMap-
 
+ ->It is used for storing keys with weak refrence.
+ ->It means when gc is executed, the objects those does not have explicit 
+    refrence is removed from WHM.
+ ->HashMap  stores objects with strong refrence means when gc is executed 
+ entries are not removed even thought does not have explicit refrence.
+
 
 ====================================================================================================================================================
 
-IdentityMap-
+IdentityHashMap-
+
+->IdentityHahsMap is used for storing entries with keys referenced based hashcode
+->Inside IHM objects class hashcode() method and equals() method are not used 
+->Only refrence with hash code and == operator are used
+->It stores data wise duplicate.
 
 
 =====================================================================================================================================================
