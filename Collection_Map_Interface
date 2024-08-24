@@ -174,13 +174,48 @@ IdentityHashMap-
 
 =====================================================================================================================================================
 
-HashTable
+HashTable-
+
+->It is a leagacy collection available from 1.0v
+-> It is syncronized collection.It is used for storing elements
+   in mutlithreded application with thread safety  
+-> as key H,H,U are allowed
+->as value H,H,U,D are allowed
+-> as key null is not allowed through NPE
+->as value null is not allowed
+-> default capacity 11
+-> data structure = hash table with bucket
+-> storing order is reverse insertion order.
 
 
 
 ====================================================================================================================================================
 
 Properties- 
+
+->Property is a legacy collection,
+->It is a sub class object of hashtable
+->It is used for storing properties of an object and further saving and loading
+     those properties in/from a file premanently.
+->A property is a (name=value) pair 
+->Each property must be placed in one line
+
+  for example ;
+    sno=101
+	name=hk
+	course=101
+	fee=3500
+  
+ ->for storing above properties we must use properties class object
+ -> The diffrence between Hashtable and Properties class is 
+      Hashtable accept all type of object and 
+      Properties accept only string type key and value
+      because file can understand only text.
+ ->For storing and retreiving properties, Properties class has provided below 2 methods()
+      1) public string setProperty(String name, String value);
+      2) public String setProperty(String name);
+  
+
 
 
 ======================================================================================================================================================
